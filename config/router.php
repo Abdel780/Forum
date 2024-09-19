@@ -11,7 +11,9 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 // Le chemin dans l'URL (comme '/') est relié au contrôleur correspondant (comme 'HomeController.php')
 $routes = [
     '/' => 'HomeController.php',
-    '/register' => 'RegisterController.php'
+    '/register' => 'RegisterController.php',
+    '/connexion' => 'ConnectionController.php',
+    '/deconnexion' => 'LogoutController.php',
 ];
 
 
