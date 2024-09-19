@@ -22,22 +22,34 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
+                    <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Accueil</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/register">Inscription</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/connexion">Connexion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/deconnexion">Déconexion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/utilisateurs">Utilisateurs</a>
-                        </li>
-                    </ul>
+                    <?php
+            if(isset($_SESSION['user'])){
+                ?>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/deconnexion"><i class="fa-solid fa-circle-plus"></i> Deconnexion</a>
+                </li>
+                <?php
+                if($_SESSION['user']['role']== "Admin"){
+                    ?>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/utilisateurs"><i class="fa-solid fa-circle-plus"></i> Utilisateurs</a>
+                    </li>
+                    <?php
+                }
+            } else {
+            ?>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/register"><i class="fa-solid fa-circle-plus"></i> Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/connexion"><i class="fa-solid fa-circle-plus"></i> Connexion</a>
+                </li>
+            <?php
+            }
+            ?>
                 </div>
             </div>
         </nav>
