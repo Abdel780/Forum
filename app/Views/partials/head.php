@@ -34,6 +34,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/deconnexion">Déconexion</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/utilisateurs">Utilisateurs</a>
+                        </li>
                     </ul>
                 </div>
             </div>
