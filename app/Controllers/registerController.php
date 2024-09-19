@@ -5,6 +5,7 @@ if(isset($_POST['pseudo'])){
     check('pseudo', $_POST['pseudo']);
     check('mail', $_POST['mail']);
     check('password', $_POST['password']);
+    
     if(empty($arrayError)){
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $mail = htmlspecialchars($_POST['mail']);
