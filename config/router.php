@@ -14,7 +14,9 @@ $routes = [
     '/register' => 'RegisterController.php',
     '/connexion' => 'ConnectionController.php',
     '/deconnexion' => 'LogoutController.php',
-    '/utilisateurs' => 'UsersController.php'
+    '/utilisateurs' => 'UsersController.php',
+    '/profile' => 'UserProfileController.php',
+    '/subject' => 'SubjectController.php'
 ];
 
 
