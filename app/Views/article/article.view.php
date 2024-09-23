@@ -19,6 +19,14 @@ if ($_SESSION['user']['idUser'] == $article['user_id']) {
     <a href="/editArticle?id=<?= $article['id'] ?>" class="btn colorYellow">Modifier</a>
 <?php
 }
+if ($_SESSION['user']['idUser'] == $article['user_id'] || $_SESSION['user']['role'] == "Admin") {
+?>
+    <form action="" method="POST">
+        <input type="hidden" id="idDelete" name="idDelete" value="<?= $article['id'] ?>">
+        <button type="submit" class="btn colorRed">Supprimer</button>
+    </form>
+<?php
+}
 ?>
 <p>Créer par : <a href="/profile?id=<?= $article['user_id'] ?>"><?= $article['pseudo'] ?></a></p>
 
